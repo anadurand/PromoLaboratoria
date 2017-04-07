@@ -1,3 +1,6 @@
+var students = [];
+
+
 document.getElementById("toggle").addEventListener("click", function(event){
   event.preventDefault();
   document.getElementById("nav-header").classList.toggle("open");
@@ -35,6 +38,7 @@ function PostImag(){
     var divSpan = document.createElement("div");
     var span = document.createElement("span");
     span.innerHTML = nombre;
+    span.className = "name";
     divSpan.classList.add("overlay");
 
     div.appendChild(img);
@@ -47,13 +51,13 @@ function PostImag(){
 
 }
 
-function mostrar(array,valor){
+function mostrar(){
   var postFotos = new PostImag();
   var docF = document.createDocumentFragment();
 
   for(i=1; i<=54; i++){
-    var ruta = "assets/img/students/i" + ".png";
-    var nombre;
+    var ruta = "assets/img/students/"+ i + ".png";
+    var nombre = "holaaaaaa";
     docF.appendChild(postFotos.createHTMLFoto(nombre,ruta));
   }
 
@@ -62,6 +66,8 @@ function mostrar(array,valor){
 
 window.addEventListener("load", function(){
   var post = document.getElementById("promo");
+  post.innerHTML = "";
+  post.appendChild(mostrar());
 
 
 });

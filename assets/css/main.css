@@ -47,6 +47,7 @@ nav.open {
   -moz-transition: none;
   -webkit-transition: none;
 }
+
 /*Nav list*/
 nav ul {
   top: -10%;
@@ -206,6 +207,8 @@ nav.solid #logo .logo {
   right:0;
   bottom: 0;
   z-index: 1000;
+  text-align: center;
+
 }
 .overlay:hover {
   background-color: rgba(249,203,11, 0.5);
@@ -216,11 +219,9 @@ nav.solid #logo .logo {
 
 .overlay span{
   color: white;
-  position: absolute;
-  left: 50%;
-  right:0;
-  bottom: 50%;
+  position: relative;
   font-size: 160%;
+  top: 50%;
   font-weight: bolder;
   display: none;
   transition: 5s;
@@ -242,6 +243,7 @@ nav.solid #logo .logo {
 }
 
 footer{
+  padding: 2%;
   background-color: black;
   color: white;
   text-align: center;

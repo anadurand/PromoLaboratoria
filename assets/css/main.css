@@ -1,7 +1,6 @@
-* {
-    box-sizing: border-box;
+*{
+  font-family: 'Raleway', sans-serif;
 }
-
 html,body{
   margin: 0;
   padding: 0;
@@ -88,7 +87,7 @@ nav.open ul li {
   font-size: 60px;
   visibility: visible;
 }
-/*Menu bar logo y menu*/
+/*logo y menu*/
 /*Logo*/
 .logo,
 .menu{
@@ -189,17 +188,15 @@ nav.solid #logo .logo {
 
 
 .foto{
-  width: 25%;
-  height: 300px;
   position: relative;
-  overflow: hidden;
   display: inline-block;
+  overflow: hidden;
 }
-.imagen{
+
+.foto .imagen{
+  width: 350px;
+  height: 350px;
   opacity: 1;
-  width: 100%;
-  height: auto;
-  height: auto;
   transition: .5s ease;
 }
 .overlay {
@@ -219,22 +216,34 @@ nav.solid #logo .logo {
 
 .overlay span{
   color: white;
-  font-family: sans-serif;
   position: absolute;
-  left: 20%;
+  left: 50%;
   right:0;
   bottom: 50%;
-  font-size: 100%;
+  font-size: 160%;
+  font-weight: bolder;
   display: none;
   transition: 5s;
 }
 .overlay:hover span{
-  display: block;
+  display: inline-block;
+  line-height: 1.1;
 }
-.promo{
-  width: 80%;
+.promocion{
+  margin: 10%;
+  line-height: 0;
 }
 
 .overflow-hidden{
   overflow: hidden;
+}
+.hidden{
+  display: none;
+}
+
+footer{
+  background-color: black;
+  color: white;
+  text-align: center;
+  height: 50px;
 }

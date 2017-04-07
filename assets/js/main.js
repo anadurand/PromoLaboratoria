@@ -1,10 +1,18 @@
-var students = [];
+var students = ["marilu_llamocca", "lourdes_vilchez", "glisse_jorge", "ruth_salvador" , "leslie_avendaño", "flor_tello",
+                "miriam_peralta", "fiorella_quispe", "annia_flores", "leidy_maldonado", "rosario_felix", "liliana_peña", "miriam_mendoza",
+                "flor_condori", "naomi_villanueva", "milagros_gutierrez", "karin_alejo", "michelle_more", "fiorella_cisneros","betsi_loayza",
+                "mariel_garcia", "erika_vidal", "angie_condor", "stephanie_hyagon","grecia_rayme", "cindy_mendoza","mitchell_rodriguez",
+                "maria_grecia_cutipa", "geraldine_chauca", "mary_castillo", "nadia_cuadros", "elizabeth_condori", "emma_tapia", "neiza_nunez",
+                "arantza_burga", "brilly_majuan", "sandra_solorzano", "yelitza_choque", "katherine_ortega", "maricarmen_rojas", "ariana_cabana",
+                "nathaly_pacheco","janine_vega", "wendy_reyes", "jenny_velasquez", "dana_franco", "nakarid_jave", "ayda_sulca", "flor_retamozo",
+                "cynthia_quispe", "ana_durand"];
 
 
 document.getElementById("toggle").addEventListener("click", function(event){
   event.preventDefault();
   document.getElementById("nav-header").classList.toggle("open");
   document.getElementById('body').classList.toggle("overflow-hidden");
+  document.getElementById("promo").classList.toggle("hidden");
 });
 var lastScrollTop = 0;
 window.addEventListener("scroll", function(){
@@ -55,11 +63,18 @@ function mostrar(){
   var postFotos = new PostImag();
   var docF = document.createDocumentFragment();
 
-  for(i=1; i<=54; i++){
-    var ruta = "assets/img/students/"+ i + ".png";
-    var nombre = "holaaaaaa";
+  students.forEach(function(item){
+    var ruta = "assets/img/students-imagenes/"+ item + ".png";
+    item = item.split("_");
+    var nombre = "";
+    item.forEach(function(e){
+      e = e.toUpperCase();
+      nombre = nombre + e + " ";
+    });
+
     docF.appendChild(postFotos.createHTMLFoto(nombre,ruta));
-  }
+
+  });
 
   return docF;
 }

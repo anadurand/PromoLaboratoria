@@ -5,6 +5,42 @@ html,body{
   margin: 0;
   padding: 0;
 }
+.animation{
+  background-color: black;
+  height: 638px;
+}
+.type-writer{
+  height: 10%;
+  padding-left: 20%;
+  padding-top: 20%;
+  width: 58%;
+  animation: typing 3.5s steps(40, end);
+}
+.type-writer h1{
+  animation: blink-caret .75s step-end infinite;
+  border-right: .15em solid white;
+  color: white;
+  overflow: hidden;
+  white-space:nowrap;
+  margin: 0;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 58% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+h1 span.purple{
+  color: purple;
+}
+h1 span.blue{
+  color: blue;
+}
+h1 span.green{
+  color: green;
+}
 
 nav{
   top: 0;
@@ -16,7 +52,7 @@ nav{
   padding-top: 0;
   z-index: 1000;
   position: fixed;
-  background-color: #fff;
+  background: none;
   transition: all 0.6s cubic-bezier(0.7,0.01,0.3,1);
 }
 
@@ -105,13 +141,10 @@ nav.open ul li {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url(../img/logo.png);
+  background-image: url(../img/laboratoria.svg);
 
 }
-.open .logo,
-nav.solid #logo .logo {
-  background-image: url(../img/laboratoria.svg);
-}
+
 .logo img{
   z-index: 2000;
 }
@@ -123,7 +156,7 @@ nav.solid #logo .logo {
   width: 24px;
   text-align:right;
   margin: 2rem 2rem;
-  background: #f7b617;
+  background: #fff;
   transition: all 0.3s;
 }
 .menu:before{
@@ -132,10 +165,10 @@ nav.solid #logo .logo {
 .menu:after{
   top: 8px;
 }
-#toggle:hover .menu::before {
+#toggle:hover.menu::before {
   top: -9px;
 }
-#toggle:hover .menu::after {
+#toggle:hover.menu::after {
   top: 9px;
 }
 .menu:before,
@@ -146,7 +179,7 @@ nav.solid #logo .logo {
   z-index: -1;
   display: block;
   position: absolute;
-  background: #f7b617;
+  background: #fff;
   transition: all 0.3s;
 }
 #toggle:hover {
@@ -182,7 +215,7 @@ nav.solid #logo .logo {
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-.open #toggle:hover .menu::after, .open #toggle:hover .menu::before{
+.open #toggle:hover.menu::after, .open #toggle:hover.menu::before{
   top: 0;
 
 }
@@ -231,7 +264,7 @@ nav.solid #logo .logo {
   line-height: 1.1;
 }
 .promocion{
-  margin: 10%;
+  margin: 0% 10%;
   line-height: 0;
 }
 
@@ -243,6 +276,10 @@ nav.solid #logo .logo {
   z-index: -1;
 }
 
+h2{
+  text-align: center;
+  padding-top: 5%;
+}
 footer{
   padding: 2%;
   background-color: black;

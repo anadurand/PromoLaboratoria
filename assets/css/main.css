@@ -239,7 +239,8 @@ nav.solid #logo .logo {
   overflow: hidden;
 }
 .hidden{
-  display: none;
+  position: absolute;
+  z-index: -1;
 }
 
 footer{
